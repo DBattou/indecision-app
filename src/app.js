@@ -1,5 +1,5 @@
-// const utils = require("./utils");
-import cvb from "./utils.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import IndecisionApp from "./components/IndecisionApp.js";
 
-console.log("COucou Battou");
-console.log(cvb(5, 3));
+ReactDOM.render(<IndecisionApp />, document.getElementById("root"));
