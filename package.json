@@ -5,18 +5,19 @@
   "license": "MIT",
   "scripts": {
     "server": "live-server public",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "dev-server": "webpack-dev-server"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.4",
-    "live-server": "^1.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "webpack": "3.1.0"
-  }
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {}
 }
