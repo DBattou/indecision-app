@@ -73,7 +73,7 @@ class IndecisionApp extends React.Component {
     return (
       <div>
         <Header
-          title="Indecision App"
+          title="Indecision Appli"
           subtitle="Let the destiny choose what you gonna do next"
         />
         <div className="container">
