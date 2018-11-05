@@ -72,7 +72,10 @@ class IndecisionApp extends React.Component {
   render() {
     return (
       <div>
-        <Header title="Indecision App" subtitle="Subtitle" />
+        <Header
+          title="Indecision App"
+          subtitle="Let the destiny choose what you gonna do next"
+        />
         <div className="container">
           <Action
             hasOptions={this.state.options.length > 0}
