@@ -3,8 +3,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = env => {
   const isProduction = env === "production" ? "production" : "development";
+  console.log(env);
+  console.log(isProduction);
+
   return {
-    mode: isProduction ? "prodcution" : "development",
+    mode: isProduction,
     entry: "./src/app.js",
     output: {
       path: path.join(__dirname, "public"),
