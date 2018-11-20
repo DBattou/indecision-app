@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <script>
+
+    let arrowObj = {
+      location: "We are in the arrow context",
+      a: "a",
+      b: "b",
+      arrowFunc: (a, b) => {
+        c = "c";
+        console.dir(this); // ==> should gives ArrowObj
+        // console.log("Arrow this.a : " + this.a); // => should gives "a"
+        // console.log("Arrow this.c : " + this.c); // => should gives "undefined"
+        return this.a;
+      }
+    }
+
+    let normalObj = {
+      location: "We are in the normal context",
+      a: "a",
+      b: "b",
+      normalFunc: function (a, b) {
+        c = "c";
+        console.dir(this); // ==> should gives normalFunction ???
+        // console.log("Normal this.a : " + this.a); // => undefined
+        // console.log("Normal this.c : " + this.c); // => c
+        return this.a;
+      }
+    }
+
+
+    // arrowObj.arrowFunc(1, 2);
+    // normalObj.normalFunc(1, 2);
+    console.log(arrowObj.arrowFunc(1, 2));
+
+  </script>
+</body>
+
+</html>

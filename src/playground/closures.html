@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- <script id="using-function">
+    let eleve = function (classe) {
+
+      return function (nom) {
+        return ("Bonjour je m'appelle " + nom + ", je suis en " + classe)
+      }
+    }
+    let marionPresent = eleve("primaire");
+    console.log(marionPresent("marion"))
+  </script> -->
+
+  <script id="using-object">
+    let eleveTerminal = {
+      classe: "Terminal",
+      disBonjour: function (nom) {
+        return ("Bonjour je m'appelle " + nom + ", je suis en " + this.classe)
+      }
+    }
+
+    let patoch = eleveTerminal.disBonjour;
+    console.dir(patoch)
+  </script>
+
+
+</body>
+
+</html>
