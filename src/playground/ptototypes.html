@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var Person = function (nom) {
+      this.nom = nom;
+      var scope = "person";
+      this.welcome = function () {
+        // console.log(this);
+        return `Hello je m'appelle ${this.nom}`;
+      }
+    }
+
+    var Eleve = function (note, nom) {
+      this.nom = nom;
+      this.note = note;
+      var scope = "person";
+      this.present = function () {
+        // console.log(this)
+        return `Present ma note est ${this.note}`;
+      }
+    }
+
+    Eleve.prototype = new Person();
+
+    var clement = new Eleve(10, "clement")
+
+    console.log(clement.present());
+  </script>
+</body>
+
+</html>

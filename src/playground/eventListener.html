@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .pink {
+      background-color: hotpink
+    }
+
+    .blue {
+      background-color: blue
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="root" class="pink">
+    <h1>Hello</h1>
+    <!-- <button id="button"> Boutton </button> -->
+  </div>
+  <div>
+    <h1>
+      Sous-titre
+    </h1>
+    <h2> Sous-titre </h2>
+    <span>du texte</span>
+    <span>un autre texte</span>
+  </div>
+</body>
+
+<script>
+
+  console.log(document.getElementById("root"));
+  var div = document.getElementById("root");
+  div.addEventListener("mouseover", changeBackgroundCOlor);
+  function changeBackgroundCOlor() {
+    console.log(div.classList);
+    div.classList.replace("pink", "blue");
+    console.log(div.classList);
+
+
+  }
+  // var button = document.getElementById("button");
+
+
+</script>
+
+</html>
